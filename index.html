@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="school"></h1>
+    <h2 id="student"></h2>
+
+    <p id="english"></p>
+    <p id="math"></p>
+    <p id="science"></p>
+
+    <h2 id="percentage"></h2>
+    <h2 id="grade"></h2>
+    <script>
+      let englishMarks = 85;
+      let mathMarks = 92; 
+      let scienceMarks = 78;
+
+      
+      let obtainedMarks = englishMarks + mathMarks + scienceMarks
+      let totalMarks = 300;
+         let totalPercent = (obtainedMarks / totalMarks) * 100;
+      let grade;
+      if(totalPercent >= 80 && totalPercent <= 100 ){
+        grade = "A"
+      }else if (totalPercent >= 70 && totalPercent <= 79){
+        grade = "B"
+      }else if (totalPercent >= 40 && totalPercent <=69){
+        grade = "C"
+      }else if (totalPercent >= 30 && totalPercent <= 39){
+        grade = "D"
+      }else if (totalPercent >= 20 && totalPercent <= 29){
+        grade = "E"
+      }
+      else {
+        grade = "F"
+      }
+      let head = document.getElementById("school");
+      head.innerText = "Bahria college karim campus";
+      let student = document.getElementById("student");
+      student.innerText = "Alveena";
+      let english = document.getElementById("english");
+      english.innerText = "English :" + englishMarks
+      let math = document.getElementById("math");
+      math.innerText = "Math :" + mathMarks
+      let science = document.getElementById("science");
+      science.innerText = "Science : " + scienceMarks
+let percent = document.getElementById("percentage");
+percent.innerText = totalPercent.toFixed(2) + "%"
+let totalGrade = document.getElementById("grade")
+totalGrade.innerText = grade;
+
+    </script>
+  </body>
+</html>
